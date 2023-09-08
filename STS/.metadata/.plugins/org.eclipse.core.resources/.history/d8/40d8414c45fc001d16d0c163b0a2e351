@@ -1,0 +1,93 @@
+package packagee19_dynamic_programming;
+
+import java.util.Arrays;
+
+public class P4_0_1_knapsack {
+	
+	
+	// Recursion
+	public static int knapsack(int[] val, int[] wt, int W, int i) {
+		// when there is nothing to add, or there is no weight then result is 0
+		if(i==0 || W == 0) {
+			return 0;
+		}
+		
+		if(wt[i] <= W) {
+			int addChoice = val[i] + knapsack(val, wt, W-wt[i], i-1);
+			int noAddChoice = knapsack(val, wt, W, i-1);
+			return Math.max(addChoice, noAddChoice);
+		}else {
+			int cantAdd = knapsack(val, wt, W, i-1);
+			return cantAdd;
+		}
+	}
+	
+	// Memoization
+	public static int knapsackMemoization(int[] val, int[] wt, int W, int i, int[][] dp) {
+		if(i == 0 || W == 0) {
+			return 0;
+		}
+		
+		if(dp[i][W] != -1) {
+			return dp[i][W];
+		}
+		
+		if(wt[i] <= W) {
+			int when_added = val[i] + knapsackMemoization(val, wt, W-wt[i], i-1, dp);
+			int when_not_added = knapsackMemoization(val, wt, W, i-1, dp);
+			dp[i][W] = Math.max(when_added, when_not_added);
+			return dp[i][W];
+		}else {
+			int when_not_possible = knapsackMemoization(val, wt, W, i-1, dp);
+			dp[i][W] = when_not_possible;
+			return dp[i][W];
+		}
+	}
+	
+	public static int knapsackTabulation(int[] val, int[] wt, int W) {
+		int n = val.length;
+		int[][] dp = new int[n+1][W+1];
+		
+		for(int i=0;i<dp.length;i++) {
+			dp[i][0] = 0;
+			dp[0][i] = 0;
+		}
+		
+		for(int i=1;i<n+1;i++) {
+			for(int j=1;j<W+1;j++) {
+				int currAvailableWeight = j;
+				int currWeightFromArr = wt[i-1];
+				if(currWeightFromArr <= currAvailableWeight) {
+					int ans1 = val[i-1]+dp[i-1][currAvailableWeight-currWeightFromArr];
+					int ans2 = dp[i-1][currAvailableWeight];
+					dp[i][j] = Math.max(ans1, ans2);
+				}else {
+					dp[i][j] =  dp[i-1][currAvailableWeight];
+				}
+			}
+		}
+		
+		return dp[n][W];
+	}
+
+	public static void main(String[] args) {
+		
+		int val[] = new int[] { 60, 100, 120 };
+        int wt[] = new int[] { 10, 20, 30 };
+        int W = 50;
+        int n = val.length;
+        
+        // Recursion
+        System.out.println(knapsack(val, wt, W, n-1));
+		
+        // Memoization
+        int[][] dp = new int[n+1][W+1];
+        for(int i=0;i<dp.length;i++) Arrays.fill(dp[i], -1);
+        System.out.println(knapsackMemoization(val, wt, W, n-1, dp));
+        
+        // Tabulation
+        System.out.println(knapsackTabulation(val, wt, W));
+
+	}
+
+}

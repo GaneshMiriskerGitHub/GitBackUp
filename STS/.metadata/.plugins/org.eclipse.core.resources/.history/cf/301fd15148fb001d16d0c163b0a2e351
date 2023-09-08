@@ -1,0 +1,13 @@
+package packagee19_dynamic_programming;
+
+public class P1_Fibonacci {
+
+	public static void main(String[] args) {
+		
+		int n = 5;
+		
+		System.out.println(fibonacci(n));
+
+	}
+
+}

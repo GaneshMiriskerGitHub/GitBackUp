@@ -1,0 +1,11 @@
+package package5_BackTracking;
+
+public class P6_Partition_Equal_SubSet_Sum {  // dp
+
+	public static void main(String[] args) {
+		
+		
+
+	
+
+}

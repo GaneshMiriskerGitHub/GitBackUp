@@ -1,0 +1,36 @@
+package packagee14_BinaryTrees;
+
+import packagee14_BinaryTrees.A2_Mirror_of_Tree.Node;
+
+public class A3_Delete_Leaf_Node { // delete all the leaf nodes for a given value
+
+	static class Node {
+		int data;
+		Node left;
+		Node right;
+
+		public Node(int data) {
+			this.data = data;
+			this.left = null;
+			this.right = null;
+		}
+	}
+
+	public static void printAllNodes(Node root) {
+
+		if (root == null) {
+			return;
+		}
+
+		System.out.print(root.data + " ");
+		printAllNodes(root.left);
+		printAllNodes(root.right);
+
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

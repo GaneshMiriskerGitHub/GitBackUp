@@ -1,0 +1,18 @@
+package package8_BackTracking;
+
+public class P7_Grid_ways_simple_math_trick {
+	
+	/*
+	 * 
+	 *    (n-1+m+1)!  /   (n-1)!(m-1)!
+	 * 
+	 * 
+	 */
+
+	public static void main(String[] args) {
+		
+		
+
+	}
+
+}

@@ -1,0 +1,16 @@
+package Type3_Unbounded_Knapsack;
+
+public class P1_Unbounded_Knapsack {
+
+	public static void main(String[] args) {
+		
+		int[] val = {15, 14, 10, 45, 30};
+		int[] wt = {2, 5, 1, 3, 4};
+		
+		int W = 7;
+		
+		System.out.println(unboundedKnapsack(val, wt, W));
+
+	}
+
+}

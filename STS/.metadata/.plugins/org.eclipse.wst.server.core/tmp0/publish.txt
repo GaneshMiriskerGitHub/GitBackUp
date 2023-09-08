@@ -1,0 +1,6 @@
+#Tomcat publish data
+#Thu Jul 20 13:34:31 IST 2023
+org.eclipse.jst.j2ee.server\:/binary\:C\:\\Users\\ganes\\.m2\\repository\\org\\apache\\tomcat\\embed\\tomcat-embed-websocket\\10.1.10\\tomcat-embed-websocket-10.1.10.jar=WEB-INF/lib/tomcat-embed-websocket-10.1.10.jar
+org.eclipse.jst.j2ee.server\:/binary\:C\:\\Users\\ganes\\.m2\\repository\\org\\apache\\tomcat\\embed\\tomcat-embed-el\\10.1.10\\tomcat-embed-el-10.1.10.jar=WEB-INF/lib/tomcat-embed-el-10.1.10.jar
+org.eclipse.jst.j2ee.server\:/binary\:C\:\\Users\\ganes\\.m2\\repository\\org\\springframework\\spring-web\\6.0.10\\spring-web-6.0.10.jar=WEB-INF/lib/spring-web-6.0.10.jar
+org.eclipse.jst.j2ee.server\:/binary\:C\:\\Users\\ganes\\.m2\\repository\\org\\apache\\tomcat\\embed\\tomcat-embed-jasper\\8.5.49\\tomcat-embed-jasper-8.5.49.jar=WEB-INF/lib/tomcat-embed-jasper-8.5.49.jar

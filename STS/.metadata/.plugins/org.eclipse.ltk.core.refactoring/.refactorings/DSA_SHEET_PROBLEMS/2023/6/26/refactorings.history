@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;package5_BackTracking.P13_Shortest_Safe_Path&apos; to &apos;PP13_Shortest_Safe_Path&apos;&#x0D;&#x0A;- Original project: &apos;DSA_SHEET_PROBLEMS&apos;&#x0D;&#x0A;- Original element: &apos;package5_BackTracking.P13_Shortest_Safe_Path&apos;&#x0D;&#x0A;- Renamed element: &apos;package5_BackTracking.PP13_Shortest_Safe_Path&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;P13_Shortest_Safe_Path&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;package5_BackTracking{P13_Shortest_Safe_Path.java[P13_Shortest_Safe_Path" matchStrategy="1" name="PP13_Shortest_Safe_Path" qualified="false" references="true" similarDeclarations="false" stamp="1687704176989" textual="false" version="1.0"/>
+</session>

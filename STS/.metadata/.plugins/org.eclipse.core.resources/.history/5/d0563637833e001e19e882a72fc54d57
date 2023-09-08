@@ -1,0 +1,15 @@
+package packagee19_Dynamic_Programming;
+
+public class A1_Tribonacci {
+	
+	public static int tribonacciRec(int n) {
+		
+	}
+
+	public static void main(String[] args) {
+		
+		
+
+	}
+
+}

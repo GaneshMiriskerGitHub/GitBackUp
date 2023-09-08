@@ -1,0 +1,20 @@
+package package8_BackTracking;
+
+public class P6_GridWays {
+	
+	public static int gridWays(int i, int j, int n, int m) {
+		
+		int w1 = gridWays(i+1, j, n, m);
+		int w2 = gridWays(i, j+1, n, m);
+	}
+
+	public static void main(String[] args) {
+		
+		int n = 3;
+		int m = 3;
+		
+		System.out.println(gridWays(0,0,n,m));
+
+	}
+
+}

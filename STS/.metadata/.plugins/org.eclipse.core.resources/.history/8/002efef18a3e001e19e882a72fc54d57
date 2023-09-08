@@ -1,0 +1,25 @@
+package packagee19_Dynamic_Programming;
+
+public class A2_Print_All_Combinations_of_Balanced_Parenthesis {
+	
+	public static void printParantheses(int n, int cClose, int cOpen, String str) {
+		if(str.length() == 2*n) {
+			System.out.println(str);
+			return;
+		}
+		
+		if(cOpen > cClose) {
+			//choice1 : include open
+			printParantheses(n, cClose, cOpen+1, str+"(");
+			//choice2 : include close
+			printParantheses(n, cClose+1, cOpen, str+")")
+		}
+	}
+
+	public static void main(String[] args) {
+		
+		int 
+
+	}
+
+}

@@ -1,0 +1,64 @@
+package packagee19_dynamic_programming;
+
+import java.util.Arrays;
+
+public class P2_Climbing_Stairs {
+
+	public static int noOfWays(int n) {
+		if (n <= 2) {
+			return n;
+		}
+
+		return noOfWays(n - 1) + noOfWays(n - 2);
+	}
+
+	// Memoization
+	public static int waysMemoization(int n, int[] dp) {
+		if (n <= 2) {
+			return n;
+		}
+
+		if (dp[n] != -1) {
+			return dp[n];
+		}
+
+		dp[n] = noOfWays(n - 1) + noOfWays(n - 2);
+
+		return dp[n];
+	}
+
+	// Tabulation
+	public static int waysTabulation(int n) {
+		if (n <= 2) {
+			return n;
+		}
+
+		int[] dp = new int[n + 1];
+		dp[0] = 0;
+		dp[1] = 1;
+		dp[2] = 2;
+		for (int i = 3; i < dp.length; i++) {
+			dp[i] = dp[i - 1] + dp[i - 2];
+		}
+
+		return dp[n];
+	}
+
+	public static void main(String[] args) {
+
+		int n = 2;
+
+		// recursion
+		System.out.println(noOfWays(n));
+
+		// memoization
+		int[] dp = new int[n + 1];
+		Arrays.fill(dp, -1);
+		System.out.println(waysMemoization(n, dp));
+
+		// Tabulation
+		System.out.println(waysTabulation(n));
+
+	}
+
+}

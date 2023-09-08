@@ -1,0 +1,46 @@
+package packagee19_dynamic_programming;
+
+public class P5_Target_Sum_Subset {
+	
+	// Recursion
+	private static boolean targetSumExists(int[] nums, int target, int i) {
+		if(target == 0) {
+			return true;
+		}
+		if(i == -1) {
+			return false;
+		}
+		
+		if(nums[i] <= target) {
+			boolean inc = targetSumExists(nums, target-nums[i], i-1);
+			boolean exc = targetSumExists(nums, target, i-1);
+			return inc || exc;
+		}else {
+			boolean exc = targetSumExists(nums, target, i-1);
+			return exc;
+		}
+	}
+	
+	// Memoization
+	public static boolean targetSumSubSet(int[] nums, int i, int j) {
+		
+	}
+	
+	
+
+	public static void main(String[] args) {
+		
+		int[] nums = {4,2,7,1,3};
+		int target = 10;
+		
+		// Recursion
+		System.out.println(targetSumExists(nums, target, nums.length-1));
+		
+		// Memoization
+		System.out.println(targetSumMemoization(nums, target, nums.length-1, ));
+		
+		boolean[][] dp = new boolean[n+1][target+1];
+
+	}
+
+}

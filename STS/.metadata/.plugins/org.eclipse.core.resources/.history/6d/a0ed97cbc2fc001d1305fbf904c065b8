@@ -1,0 +1,18 @@
+package strings;
+
+public class PP16_Wild_Card_Matching {
+	
+	public static boolean isValid(String s, String p) {
+		boolean[][] dp = new boolean[s.length()+1][p.length()+1];
+	}
+
+	public static void main(String[] args) {
+		
+		String s = "aa";
+		String p = "*";
+		
+		System.out.println(isValid(s, p));
+
+	}
+
+}

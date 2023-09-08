@@ -1,0 +1,20 @@
+package package8_BackTracking;
+
+public class P5_NQueens_with_attacking_rule_followed {
+	
+	public static void nQueens(char[][] board, int n) {
+		
+		for()
+		
+	}
+
+	public static void main(String[] args) {
+		
+		int n=4;
+		char[][] board = new char[n][n];
+		int row = 0;
+		nQueens(board, row);
+
+	}
+
+}

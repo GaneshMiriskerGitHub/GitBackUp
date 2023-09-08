@@ -1,0 +1,57 @@
+package Type2_KnapSack;
+
+/*
+ * divide the given array in two parts in any order : in such a way that, the difference between 
+ * both their sum should be minimum
+ */
+
+public class P4_Minimum_SubSet_Sum_Difference {
+
+	public static int findMinRec(int arr[], int i, int sumCalculated, int sumTotal) {
+
+		if (i == 0)
+			return Math.abs((sumTotal - sumCalculated) - sumCalculated);
+
+		return Math.min(findMinRec(arr, i - 1, sumCalculated + arr[i - 1], sumTotal),
+				findMinRec(arr, i - 1, sumCalculated, sumTotal));
+	}
+
+	public static int findMinDiffRecursion(int[] arr, int i, int totalSum) {
+		
+		if(i == arr.length-1) {
+			return Math.abs(totalSum-arr[i]);
+		}
+		
+		
+		if(totalSum >= arr[i]) {
+			int include = findMinDiffRecursion(arr, i+1, totalSum-arr[i]);
+			int exclude = findMinDiffRecursion(arr, i+1, totalSum);
+			return Math.min(include, exclude);
+		}else {
+			int exclude = findMinDiffRecursion(arr, i+1, totalSum);
+			return exclude;
+		}
+	}
+
+	public static int findMinDiff(int[] arr) {
+
+		int sum = 0;
+		for (int i = 0; i < arr.length; i++) {
+			sum += arr[i];
+		}
+
+		return findMinDiffRecursion(arr, 0, sum);
+
+	}
+
+	public static void main(String[] args) {
+
+		int arr[] = { 3, 1, 4, 2, 2, 1 };
+
+//		System.out.println(findMinDiff(arr));
+		
+		System.out.println(findMinRec(arr, arr.length, 0, 13));
+
+	}
+
+}

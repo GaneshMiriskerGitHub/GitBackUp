@@ -1,0 +1,15 @@
+package packagee19_dynamic_programming;
+
+public class P4_0_1_knapsack {
+
+	public static void main(String[] args) {
+		
+		int profit[] = new int[] { 60, 100, 120 };
+        int weight[] = new int[] { 10, 20, 30 };
+        int W = 50;
+        int n = profit.length;
+		
+
+	}
+
+}

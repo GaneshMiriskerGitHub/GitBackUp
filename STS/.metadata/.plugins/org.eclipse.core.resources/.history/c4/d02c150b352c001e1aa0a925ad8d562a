@@ -1,0 +1,59 @@
+package Type2_KnapSack;
+
+import java.util.Arrays;
+
+/*
+ * divide the given array in two parts in any order : in such a way that, the difference between 
+ * both their sum should be minimum
+ */
+
+public class P4_Minimum_SubSet_Sum_Difference {
+
+	public static int findMinDiffRecursion(int[] arr, int i, int totalSum) {
+		
+		if(i==0) return arr[0];
+		
+		if(i==1) return Math.abs(Math.min(arr[0], arr[1]));
+		
+		
+		if(totalSum >= arr[i]) {
+			int include = findMinDiffRecursion(arr, i-1, totalSum-arr[i]);
+			int exclude = findMinDiffRecursion(arr, i-1, totalSum);
+			return Math.min(include, exclude);
+		}else {
+			int exclude = findMinDiffRecursion(arr, i-1, totalSum);
+			return exclude;
+		}
+	}
+	
+	// memoization
+	public static int findMinDiffMemo(int[] arr, int i, int totalSum, int[] memo) {
+		
+	}
+
+
+	public static int findMinDiff(int[] arr) {
+
+		int sum = 0;
+		for (int i = 0; i < arr.length; i++) {
+			sum += arr[i];
+		}
+
+		return findMinDiffRecursion(arr, arr.length-1, sum);
+
+	}
+
+	public static void main(String[] args) {
+
+		int arr[] = { 3, 1, 4, 2, 2, 1 };
+
+		System.out.println(findMinDiff(arr));
+		
+		int[] memo = new int[arr.length];
+		Arrays.fill(memo, -1);
+		int sum = 0; for(int e: arr) sum+=e;
+		System.out.println(findMinDiffMemo(arr, arr.length-1, sum, memo));
+
+	}
+
+}

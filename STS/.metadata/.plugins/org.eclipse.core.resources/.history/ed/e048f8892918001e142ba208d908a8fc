@@ -1,0 +1,10 @@
+package package6_LinkedList;
+
+public class P5_Remove_Duplicates_from_Unsorted_LinkedList {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
