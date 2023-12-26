@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename package &apos;package14_BST&apos; to &apos;packagee14_BST&apos;&#x0D;&#x0A;- Original project: &apos;DSA_Explained_Problems&apos;&#x0D;&#x0A;- Original element: &apos;DSA_Explained_Problems/src/package14_BST&apos;&#x0D;&#x0A;- Renamed element: &apos;DSA_Explained_Problems/src/packagee14_BST&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;package14_BST&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;package14_BST" name="packagee14_BST" qualified="false" references="true" stamp="1689350348809" textual="false" version="1.0"/>
-</session>

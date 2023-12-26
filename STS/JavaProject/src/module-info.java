@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author ganes
- *
- */
-module JavaProject {
-}
